@@ -31,6 +31,7 @@ export default function useQuotes(): QuoteProps[] {
       const quotesDataWithHeights = quotesData.map(
         (item: any, index: number): QuoteProps => ({
           ...item,
+          width: QuestionItemMetrics.width,
           height: textHeights[index] + QuestionItemMetrics.padding.vertical * 2,
         }),
       );

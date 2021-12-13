@@ -1,6 +1,5 @@
 import React, {useCallback, useMemo} from 'react';
 import {DataProvider, LayoutProvider, RecyclerListView} from 'recyclerlistview';
-import {QuestionItemMetrics} from '../components/QuoteItem/styles';
 import QuoteItem, {QuoteProps} from '../components/QuoteItem';
 import useQuotes from '../hooks/useQuotes';
 import useSelects from '../hooks/useSelects';
@@ -24,7 +23,7 @@ export default function RecyclerListExample() {
       new LayoutProvider(
         index => dataProvider.getDataForIndex(index),
         (item: any, dim) => {
-          dim.width = QuestionItemMetrics.width;
+          dim.width = item.width;
           dim.height = item.height;
         },
       ),

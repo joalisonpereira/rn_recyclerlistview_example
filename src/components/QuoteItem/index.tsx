@@ -4,6 +4,7 @@ import {Container, ContainerProps, Quote} from './styles';
 export type QuoteProps = {
   id: string;
   title: string;
+  width?: number;
   height?: number;
 };
 

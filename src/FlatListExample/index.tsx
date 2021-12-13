@@ -8,7 +8,7 @@ import {Container} from './styles';
 export default function FlatListExample() {
   const quotes = useQuotes();
 
-  const [selects, toggle] = useSelects();
+  const [selects, toggleSelect] = useSelects();
 
   return (
     <Container>
@@ -18,7 +18,7 @@ export default function FlatListExample() {
         renderItem={({item}) => (
           <QuoteItem
             quote={item}
-            onPress={() => toggle(item.id)}
+            onPress={() => toggleSelect(item.id)}
             active={selects.includes(item.id)}
           />
         )}

@@ -15,7 +15,7 @@ export default function useQuotes(): QuoteProps[] {
       const quotesData: QuoteProps[] = data.data.map(
         (item: any, index: number): QuoteProps => ({
           id: item._id,
-          title: `${index} - ${item.quoteText}`,
+          title: `${index + 1} - ${item.quoteText}`,
         }),
       );
 

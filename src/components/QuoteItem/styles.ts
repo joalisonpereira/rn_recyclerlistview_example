@@ -5,7 +5,7 @@ const deviceWidth = Dimensions.get('window').width;
 
 const padding = {
   vertical: 10,
-  horizontal: 30,
+  horizontal: 20,
 };
 
 export const QuestionItemMetrics = {
@@ -24,7 +24,7 @@ export const Container = styled(Pressable)<ContainerProps>`
   width: ${deviceWidth}px;
   height: ${props => `${props.calculatedHeight}px` ?? 'auto'};
   justify-content: center;
-  padding: 10px ${padding.horizontal}px;
+  padding: ${padding.vertical}px ${padding.horizontal}px;
   border-bottom-width: 1px;
   border-color: #f0f0f0;
   background-color: ${props => (props.active ? '#0d5' : '#333')};

@@ -9,7 +9,7 @@ import {Container} from './styles';
 export default function RecyclerListExample() {
   const quotes = useQuotes();
 
-  const [selects, toggle] = useSelects();
+  const [selects, toggleSelect] = useSelects();
 
   const dataProvider = useMemo(
     () =>
@@ -35,12 +35,12 @@ export default function RecyclerListExample() {
     (_type, item: QuoteProps, _index, {selectedIds}) => (
       <QuoteItem
         quote={item}
-        onPress={() => toggle(item.id)}
+        onPress={() => toggleSelect(item.id)}
         active={selectedIds.includes(item.id)}
         calculatedHeight={item.height}
       />
     ),
-    [toggle],
+    [toggleSelect],
   );
 
   return (

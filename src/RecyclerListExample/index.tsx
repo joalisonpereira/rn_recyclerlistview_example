@@ -43,8 +43,6 @@ export default function RecyclerListExample() {
     [toggle],
   );
 
-  console.log(quotes[93]);
-
   return (
     <Container>
       {quotes.length > 0 && (

@@ -6,7 +6,7 @@ import useSelects from '../hooks/useSelects';
 import {Container} from './styles';
 
 export default function RecyclerListExample() {
-  const quotes = useQuotes();
+  const quotes = useQuotes(2000);
 
   const [selects, toggleSelect] = useSelects();
 

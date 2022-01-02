@@ -3,19 +3,19 @@ import rnFontSize from 'react-native-text-size';
 import {QuoteProps} from '../components/QuoteItem';
 import {QuestionItemMetrics} from '../components/QuoteItem/styles';
 
-const API_URL = 'https://quote-garden.herokuapp.com/api/v3/quotes?limit=2000';
-
-export default function useQuotes(): QuoteProps[] {
+export default function useQuotes(limit: number): QuoteProps[] {
   const [quotes, setQuotes] = useState<QuoteProps[]>([]);
+
+  const URL = `https://quote-garden.herokuapp.com/api/v3/quotes?${limit}`;
 
   useEffect(() => {
     async function fetchQuotes() {
-      const data = await fetch(API_URL).then(res => res.json());
+      const data = await fetch(URL).then(res => res.json());
 
       const quotesData: QuoteProps[] = data.data.map(
         (item: any, index: number): QuoteProps => ({
           id: item._id,
-          title: `${index + 1} - ${item.quoteText}`,
+          title: index + 1 + '-' + item.quoteText,
         }),
       );
 
@@ -40,7 +40,7 @@ export default function useQuotes(): QuoteProps[] {
     }
 
     fetchQuotes();
-  }, []);
+  }, [URL]);
 
   return quotes;
 }

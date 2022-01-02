@@ -6,7 +6,7 @@ import {QuestionItemMetrics} from '../components/QuoteItem/styles';
 export default function useQuotes(limit: number): QuoteProps[] {
   const [quotes, setQuotes] = useState<QuoteProps[]>([]);
 
-  const URL = `https://quote-garden.herokuapp.com/api/v3/quotes?${limit}`;
+  const URL = `https://quote-garden.herokuapp.com/api/v3/quotes?limit=${limit}`;
 
   useEffect(() => {
     async function fetchQuotes() {

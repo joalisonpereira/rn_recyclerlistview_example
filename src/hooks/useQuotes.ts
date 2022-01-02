@@ -3,7 +3,7 @@ import rnFontSize from 'react-native-text-size';
 import {QuoteProps} from '../components/QuoteItem';
 import {QuestionItemMetrics} from '../components/QuoteItem/styles';
 
-const API_URL = 'https://quote-garden.herokuapp.com/api/v3/quotes?limit=500';
+const API_URL = 'https://quote-garden.herokuapp.com/api/v3/quotes?limit=2000';
 
 export default function useQuotes(): QuoteProps[] {
   const [quotes, setQuotes] = useState<QuoteProps[]>([]);

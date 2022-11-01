@@ -1,5 +1,5 @@
 <h1 align="left">
-  <strong>RecyclerListView Example</strong>
+  <strong>RecyclerListView</strong>
 </h1>
 
 <p align="left">
@@ -8,7 +8,7 @@
 
 ## Article
 
-https://medium.com/@joalison.pereira/797f654e1026
+[Medium](https://medium.com/@joalison.pereira/797f654e1026)
 
 ## Author
 

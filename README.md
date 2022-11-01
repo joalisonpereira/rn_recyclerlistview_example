@@ -1,7 +1,3 @@
-# rn_recyclerlistview_example
-
-
-
 <h1 align="left">
   <strong>RecyclerListView Example</strong>
 </h1>
